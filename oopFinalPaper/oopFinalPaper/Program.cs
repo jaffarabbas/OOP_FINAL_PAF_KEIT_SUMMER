@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 namespace oopFinalPaper
 {
 
-
   abstract class PersonType
     {
         private string firstname;
@@ -140,7 +139,57 @@ namespace oopFinalPaper
             Console.WriteLine("Pateint ID : "+getpId()+"\nPateint age : "+getAge()+"\nPateint Date of Birth : "+getDateOfBirth()+"\nPhysiciast Name : "+getPhyName()+"\nEnterce date : "+getEnterdDate()+"\nDistacred Date : "+getDisDate());
         }
     }
+    
+    
+    class BillType{
+        private int PateintIdOnBill;
+        private double parmacy;
+        private double medicine;
+        private double docter_fees;
+        private double room_charges;
 
+        
+        public double getPatentIdonbill(){
+            return PateintIdOnBill;
+        }
+        public double getParmacy(){
+            return parmacy;
+        }
+        public double getmedcine(){
+            return medicine;
+        }
+        public double getDocterfees(){
+            return docter_fees;
+        }
+        public double getRoomCharges(){
+            return room_charges;
+        }
+        
+        public void setpatentidonbill(double id){
+            this.PateintIdOnBill = id;
+        }
+        public void setparmacy(double parmacy){
+            this.age = parmacy;
+        }
+        public void setmedicine(double medicine){
+            this.dateofbirth = medicine;
+        }
+        public void setdoctercharges(double docter_fees){
+            this.Phycisiansname = docter_fees;
+        }
+        public void setroomcharges(double room_charges){
+            this.enterdDate = room_charges;
+        }
+        
+        BillType(int id,double par,double med,double doc,double rom){
+            setpatentidonbill(id);
+            setparmacy(par);
+            setmedicine(med);
+            setdoctercharges(doc);
+            setroomcharges(rom);
+            Console.WriteLine("Pateint id : "+getPatentIdonbill+"\nCharges on Parmacy : "+getParmacy()+"\nCharges on Medicine"+getmedcine()+"\nCharges on Docter"+getDocterfees()+"\nCharges on Room"+getRoomCharges());
+        }
+    }
 
 
     class Program
@@ -149,6 +198,7 @@ namespace oopFinalPaper
         {
             DocterType obj = new DocterType("jaffar", "abbas", "sergion");
             PateintType o = new PateintType("tahlha ","ano",324,1,"2-2-2020","askhdl","2-3-1999","4-4-2020");
+            BillType bill = new BillType(o.getpId(),233,344,3434,3434);
         }
     }
 
