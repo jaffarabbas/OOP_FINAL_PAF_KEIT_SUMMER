@@ -41,14 +41,13 @@ namespace oopFinalPaper
     {
         private string Docter_Speciality;
 
-        public string getfname()
+        public string getSepeciality()
         {
-            return firstname;
+            return Docter_Speciality;
         }
-        public void setName(string firstnam)
+        public void setSpeaclity(string speciality)
         {
-            this.firstname = firstname;
-            this.lastname = lastname;
+            this.Docter_Speciality = speciality;
         }
         public override string personType()
         {
@@ -56,7 +55,7 @@ namespace oopFinalPaper
         }
         public DocterType(string firstname, string lastname,string speaciality):base(firstname,lastname)
         {
-            this.Docter_Speciality = speaciality;
+            setSpeaclity(speaciality);
             setName(firstname, lastname);
             PrintDocter();
         }
@@ -66,9 +65,24 @@ namespace oopFinalPaper
             Console.WriteLine("Speaclity : "+Docter_Speciality);
         }
     }
+    //Design the class patientType, inherited from the class personType with additional data members to store a patient’s ID, age,
+    //    date of birth, attending physician’s name, the date when the patient was admitted in the hospital, and the date when the
+    //    patient was discharged from the hospital.Add appropriate constructors and member functions to initialize, access, and 
+    //        manipulate the data members.Write a program to test your classes.
 
-    class 
 
+    class PateintType : PersonType
+    {
+        public override string personType()
+        {
+            throw new NotImplementedException();
+        }
+
+        public PateintType(int patentId,int age,string dateofbirth,string name,string enterdtae,string distardedate):base()
+        {
+
+        }
+    }
 
 
 
