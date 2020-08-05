@@ -73,12 +73,14 @@ namespace oopFinalPaper
 
     class PateintType : PersonType
     {
+        private int patentId;
+        private
         public override string personType()
         {
             throw new NotImplementedException();
         }
 
-        public PateintType(int patentId,int age,string dateofbirth,string name,string enterdtae,string distardedate):base()
+        public PateintType(string firstname,string lastname,int patentId,int age,string dateofbirth,string Phycisiansname,string enterdtae,string distardedate):base(firstname,lastname)
         {
 
         }
