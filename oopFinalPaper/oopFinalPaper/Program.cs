@@ -50,7 +50,7 @@ namespace oopFinalPaper
         }
         public override string personType()
         {
-            return "";
+            return "*******Docter*******";
         }
         public DocterType(string firstname, string lastname,string speaciality):base(firstname,lastname)
         {
@@ -60,8 +60,9 @@ namespace oopFinalPaper
         }
         public void PrintDocter()
         {
+            Console.WriteLine(personType());
             Print();
-            Console.WriteLine("Speaclity : "+Docter_Speciality);
+            Console.WriteLine("Speaclity : " +Docter_Speciality);
         }
     }
     //Design the class patientType, inherited from the class personType with additional data members to store a patient’s ID, age,
@@ -119,7 +120,7 @@ namespace oopFinalPaper
         }
          public override string personType()
          {
-            return "";
+            return "*******Paitent********";
          }
 
         public PateintType(string firstname,string lastname,int patentId,int age,string dateofbirth,string Phycisiansname,string enterdDate,string distardedate):base(firstname,lastname)
@@ -135,8 +136,9 @@ namespace oopFinalPaper
         }
         
         public void patentShow(){
+            Console.WriteLine(personType());
             Print();
-            Console.WriteLine("Pateint ID : "+getpId()+"\nPateint age : "+getAge()+"\nPateint Date of Birth : "+getDateOfBirth()+"\nPhysiciast Name : "+getPhyName()+"\nEnterce date : "+getEnterdDate()+"\nDistacred Date : "+getDisDate());
+            Console.WriteLine("Pateint ID : " +getpId()+"\nPateint age : "+getAge()+"\nPateint Date of Birth : "+getDateOfBirth()+"\nPhysiciast Name : "+getPhyName()+"\nEnterce date : "+getEnterdDate()+"\nDistacred Date : "+getDisDate());
         }
     }
     
@@ -165,29 +167,30 @@ namespace oopFinalPaper
             return room_charges;
         }
         
-        public void setpatentidonbill(double id){
+        public void setpatentidonbill(int id){
             this.PateintIdOnBill = id;
         }
         public void setparmacy(double parmacy){
-            this.age = parmacy;
+            this.parmacy = parmacy;
         }
         public void setmedicine(double medicine){
-            this.dateofbirth = medicine;
+            this.medicine = medicine;
         }
         public void setdoctercharges(double docter_fees){
-            this.Phycisiansname = docter_fees;
+            this.docter_fees = docter_fees;
         }
         public void setroomcharges(double room_charges){
-            this.enterdDate = room_charges;
+            this.room_charges = room_charges;
         }
         
-        BillType(int id,double par,double med,double doc,double rom){
+        public BillType(int id,double par,double med,double doc,double rom){
+            Console.WriteLine("************************BILL**************************");
             setpatentidonbill(id);
             setparmacy(par);
             setmedicine(med);
             setdoctercharges(doc);
             setroomcharges(rom);
-            Console.WriteLine("Pateint id : "+getPatentIdonbill+"\nCharges on Parmacy : "+getParmacy()+"\nCharges on Medicine"+getmedcine()+"\nCharges on Docter"+getDocterfees()+"\nCharges on Room"+getRoomCharges());
+            Console.WriteLine("Pateint id : "+getPatentIdonbill()+"\nCharges on Parmacy : "+getParmacy()+"\nCharges on Medicine"+getmedcine()+"\nCharges on Docter"+getDocterfees()+"\nCharges on Room"+getRoomCharges());
         }
     }
 
