@@ -8,7 +8,7 @@ namespace oopFinalPaper
 {
 
 
-    abstract class PersonType
+  abstract class PersonType
     {
         private string firstname;
         private string lastname;
@@ -49,10 +49,10 @@ namespace oopFinalPaper
         {
             this.Docter_Speciality = speciality;
         }
-        public override string personType()
-        {
-            throw new NotImplementedException();
-        }
+        // public override string personType()
+        // {
+        //     Console.WriteLine("Docter");
+        // }
         public DocterType(string firstname, string lastname,string speaciality):base(firstname,lastname)
         {
             setSpeaclity(speaciality);
@@ -74,15 +74,70 @@ namespace oopFinalPaper
     class PateintType : PersonType
     {
         private int patentId;
-        private
-        public override string personType()
-        {
-            throw new NotImplementedException();
+        private int age;
+        private string dateofbirth;
+        private string Phycisiansname;
+        private string enterdDate;
+        private string distardedate;
+        
+        
+        public int getpId(){
+            return patentId;
         }
+        public int getAge(){
+            return age;
+        }
+        public string getDateOfBirth(){
+            return dateofbirth;
+        }
+        public string getPhyName(){
+            return Phycisiansname;
+        }
+        public string getEnterdDate(){
+            return enterdDate;
+        }
+        public string getDisDate(){
+            return distardedate;
+        }
+        
+        public void setPId(int id){
+            this.patentId = id;
+        }
+        public void setAge(int age){
+            this.age = age;
+        }
+        public void setDateofBirth(string dbo){
+            this.dateofbirth = dbo;
+        }
+        public void setPhyname(string Phycisiansname){
+            this.Phycisiansname = Phycisiansname;
+        }
+        public void setEnterdDate(string enterdDate){
+            this.enterdDate = enterdDate;
+        }
+        public void setDiscrdDate(string distardedate){
+            this.distardedate = distardedate;
+        }
+        // public override string personType()
+        // {
+        //     Console.WriteLine("Pateint");
+        // }
 
-        public PateintType(string firstname,string lastname,int patentId,int age,string dateofbirth,string Phycisiansname,string enterdtae,string distardedate):base(firstname,lastname)
+        public PateintType(string firstname,string lastname,int patentId,int age,string dateofbirth,string Phycisiansname,string enterdDate,string distardedate):base(firstname,lastname)
         {
-
+            setName(firstname,lastname);
+            setPId(patentId);
+            setAge(age);
+            setDateofBirth(dateofbirth);
+            setPhyname(Phycisiansname);
+            setEnterdDate(enterdDate);
+            setDiscrdDate(distardedate);
+            patentShow();
+        }
+        
+        public void patentShow(){
+            Print();
+            Console.WriteLine("Pateint ID : "+getpId()+"\nPateint age : "+getAge()+"\nPateint Date of Birth : "+getDateOfBirth()+"\nPhysiciast Name : "+getPhyName()+"\nEnterce date : "+getEnterdDate+"\nDistacred Date : "+getDisDate());
         }
     }
 
@@ -93,6 +148,9 @@ namespace oopFinalPaper
         static void Main(string[] args)
         {
             DocterType obj = new DocterType("jaffar", "abbas", "sergion");
+            PateintType o = new PateintType("tahlha ","ano",324,1,"2-2-2020","askhdl","2-3-1999","4-4-2020");
         }
     }
+
+
 }
