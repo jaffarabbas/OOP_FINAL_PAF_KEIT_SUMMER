@@ -49,10 +49,10 @@ namespace oopFinalPaper
         {
             this.Docter_Speciality = speciality;
         }
-        // public override string personType()
-        // {
-        //     Console.WriteLine("Docter");
-        // }
+        public override string personType()
+        {
+            return "";
+        }
         public DocterType(string firstname, string lastname,string speaciality):base(firstname,lastname)
         {
             setSpeaclity(speaciality);
@@ -118,10 +118,10 @@ namespace oopFinalPaper
         public void setDiscrdDate(string distardedate){
             this.distardedate = distardedate;
         }
-        // public override string personType()
-        // {
-        //     Console.WriteLine("Pateint");
-        // }
+         public override string personType()
+         {
+            return "";
+         }
 
         public PateintType(string firstname,string lastname,int patentId,int age,string dateofbirth,string Phycisiansname,string enterdDate,string distardedate):base(firstname,lastname)
         {
@@ -137,7 +137,7 @@ namespace oopFinalPaper
         
         public void patentShow(){
             Print();
-            Console.WriteLine("Pateint ID : "+getpId()+"\nPateint age : "+getAge()+"\nPateint Date of Birth : "+getDateOfBirth()+"\nPhysiciast Name : "+getPhyName()+"\nEnterce date : "+getEnterdDate+"\nDistacred Date : "+getDisDate());
+            Console.WriteLine("Pateint ID : "+getpId()+"\nPateint age : "+getAge()+"\nPateint Date of Birth : "+getDateOfBirth()+"\nPhysiciast Name : "+getPhyName()+"\nEnterce date : "+getEnterdDate()+"\nDistacred Date : "+getDisDate());
         }
     }
 
